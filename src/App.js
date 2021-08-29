@@ -9,6 +9,7 @@ import {
 import Login from './components/auth/login';
 import Home from './components/home';
 import NavBar from './components/navbar'
+import Register from './components/auth/register';
 
 function App() {
   let [value, setValue] = useState(null);
@@ -35,6 +36,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login setValue={setValue}/>
+          </Route>
+          <Route path="/register">
+            <Register setValue={setValue}/>
           </Route>
           <Route path="/home">
             <Home getCookie={getCookie}/>

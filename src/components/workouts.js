@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
+
+
 export default function Workouts({ getCookie }) {
+
     let [workouts, setWorkouts] = useState(null);
 
     useEffect(() => {
@@ -12,7 +15,6 @@ export default function Workouts({ getCookie }) {
                 'Content-Type': 'application/json',
             }
         }).then(response => {
-            console.log(response.data.data[0].exercises);
             setWorkouts(response.data.data)
         })
     }, [])

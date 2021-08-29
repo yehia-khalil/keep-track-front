@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useHistory, Redirect } from 'react-router-dom';
+import { useHistory, Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Login({ setValue }) {
@@ -35,6 +35,7 @@ function Login({ setValue }) {
       <label>password</label>
       <input type="password" onChange={(e) => { setPassword(e.target.value) }} />
       <button type="button" className="btn btn-primary" onClick={() => login()}>Submit</button>
+      <Link to="/register">Register</Link>
     </div>
   );
 }

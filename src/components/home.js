@@ -6,7 +6,8 @@ function Home({ getCookie }) {
     let match = useRouteMatch();
 
     return (
-        !localStorage.getItem("user") ? <Redirect to='/login'></Redirect> : <div>
+        <div>
+            {!localStorage.getItem("user") && <Redirect to='/login'></Redirect>}
             <ul>
                 <li>
                     <Link to={`${match.url}/workouts`}>Workouts</Link>
