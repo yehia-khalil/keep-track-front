@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Redirect, useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import Workouts from './workouts';
 
-function Home() {
+function Home({ getCookie }) {
     let match = useRouteMatch();
 
     return (
@@ -18,7 +18,7 @@ function Home() {
 
             <Switch>
                 <Route path={`${match.path}/workouts`}>
-                    <Workouts />
+                    <Workouts getCookie={getCookie} />
                 </Route>
                 <Route path={`${match.path}/exercises`}>
                     <h1>EXERCISe</h1>

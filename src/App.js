@@ -5,8 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect
 } from "react-router-dom";
 import Login from './components/auth/login';
 import Home from './components/home';
@@ -39,7 +37,7 @@ function App() {
             <Login setValue={setValue}/>
           </Route>
           <Route path="/home">
-            <Home />
+            <Home getCookie={getCookie}/>
           </Route>
         </Switch>
       </div>

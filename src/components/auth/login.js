@@ -28,7 +28,7 @@ function Login({ setValue }) {
 
     <div className="d-flex flex-column">
 
-      {localStorage.getItem("user") && <Redirect to='/'></Redirect>}
+      {localStorage.getItem("user") && <Redirect to='/home'></Redirect>}
 
       <label>email</label>
       <input type="email" onChange={(e) => { setEmail(e.target.value) }} autoComplete />
